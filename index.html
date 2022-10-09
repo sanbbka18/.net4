@@ -1,0 +1,103 @@
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta charset="utf-8">
+<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="ru">
+
+<form name="quiz" class="quiz" id="quiz" action="javascript:check();">
+<h3> ASP.NET це </h3>
+<input name="vopros1" checked="checked" value="yes" id="value1" type="radio"> технологія створення вебзастосунків і вебсервісів від компанії Майкрософт. <br>
+<input name="vopros1" value="no" id="value2" type="radio"> мова програмуваня <br>
+<input name="vopros1" value="no" id="value3" type="radio"> вебзастосунок <br>
+<input name="vopros1" value="no" id="value4" type="radio"> компанія яка виготовляє ноутбуки <br>
+
+<h3> Остання версія технології ASP.NET </h3>
+<input name="vopros2" checked="checked" value="yes" id="value1" type="radio"> ASP.NET Core 6.0 <br>
+<input name="vopros2" value="no" id="value2" type="radio"> ASP.NET Core 5.0 <br>
+<input name="vopros2" value="no" id="value3" type="radio"> ASP.NET Core 4.0 <br>
+<input name="vopros2" value="no" id="value4" type="radio"> ASP.NET Core 3.6 <br>
+
+<h3> Як називається початковий проект </h3>
+<input name="vopros3" checked="checked" value="no" id="value1" type="radio"> XSS <br>
+<input name="vopros3" value="yes" id="value2" type="radio"> XSP <br>
+<input name="vopros3" value="no" id="value3" type="radio"> XST <br>
+<input name="vopros3" value="no" id="value4" type="radio"> XSL <br>
+
+<h3> Що означає буква X в назві попереднього питання </h3>
+<input name="vopros4" checked="checked" value="no" id="value1" type="radio"> X була назва їх компанії <br>
+<input name="vopros4" value="no" id="value2" type="radio"> з системи координат X та Y  <br>
+<input name="vopros4" value="no" id="value3" type="radio"> розробники не пам'ятають <br>
+<input name="vopros4" value="yes" id="value4" type="radio"> нічого не значила <br>
+
+<h3> Користувацьким елементам керування властиві такі характеристики: </h3>
+<input name="vopros5" checked="checked" value="no" id="value1" type="radio"> можуть містити тег h1 <br>
+<input name="vopros5" value="no" id="value2" type="radio"> не мають директиву Control замість Page.  <br>
+<input name="vopros5" value="no" id="value3" type="radio"> можуть містити тегів html, body або form <br>
+<input name="vopros5" value="yes" id="value4" type="radio"> мають розширення .ascx <br>
+
+<h3> Чи можуть програмісти створювати спеціальні елементи керування для додатків ASP.NET </h3>
+<input name="vopros6" checked="checked" value="no" id="value1" type="radio"> можуть але якщо мають зареєстровану компанію <br>
+<input name="vopros6" value="no" id="value2" type="radio"> не можуть  <br>
+<input name="vopros6" value="no" id="value3" type="radio"> можуть тільки при оборотах компанії від 100 000$ <br>
+<input name="vopros6" value="yes" id="value4" type="radio"> можуть <br>
+
+<h3> ASP.NET бере свою назву від </h3>
+<input name="vopros7" checked="checked" value="no" id="value1" type="radio"> від старої технології Microsoft NET and ASP <br>
+<input name="vopros7" value="no" id="value2" type="radio"> не від якої назви  <br>
+<input name="vopros7" value="no" id="value3" type="radio"> від старої технології Microsoft .NET <br>
+<input name="vopros7" value="yes" id="value4" type="radio"> від старої технології Microsoft ASP <br>
+
+<h3> Microsoft повністю перебудувала ASP.NET, ґрунтуючись на </h3>
+<input name="vopros8" checked="checked" value="no" id="value1" type="radio"> C# Runtime <br>
+<input name="vopros8" value="no" id="value2" type="radio"> ASP.NET Language Runtime  <br>
+<input name="vopros8" value="no" id="value3" type="radio"> Common ASP.NET <br>
+<input name="vopros8" value="yes" id="value4" type="radio"> Common Language Runtime <br>
+
+<h3> Перевага ASP.NET </h3>
+<input name="vopros9" checked="checked" value="no" id="value1" type="radio"> в мові C#  <br>
+<input name="vopros9" value="no" id="value2" type="radio"> ASP.NET має перевагу у повільності в порівнянні з іншими технологіями  <br>
+<input name="vopros9" value="no" id="value3" type="radio"> ASP.NET спирається на багатомовні можливості java <br>
+<input name="vopros9" value="yes" id="value4" type="radio"> Поділ візуальної частини та бізнес-логіки <br>
+
+<h3> На якій мові розробники можуть писати код для ASP.NET </h3>
+<input name="vopros10" checked="checked" value="no" id="value1" type="radio"> тільки JS  <br>
+<input name="vopros10" value="no" id="value2" type="radio"> тільки java  <br>
+<input name="vopros10" value="no" id="value3" type="radio"> тільки С# <br>
+<input name="vopros10" value="yes" id="value4" type="radio"> практично на будь-якій мові програмування <br>
+<br>
+<input value="Відповісти" type="submit">
+</form>
+<script>
+ function check()
+ {
+ var yes=0;
+ var no=0;
+ var otvet="";
+ var choice;
+ for (var v=1; v<=10; v++)
+ {
+ var q = document.forms['quiz'].elements['vopros'+v];
+  for (var i=0; i<q.length; i++)
+  {
+  if (q[i].checked) {
+  choice=q[i].value;
+  }
+  }
+  if (choice=="yes") {yes++;}
+  if (choice=="no") {no++;}
+ }
+ switch (true) {
+ case (yes==0): otvet="0 правильних відповідей";break;
+ case (yes==1): otvet="1 правильна відповідь";break;
+ case (yes==2): otvet="2 правильні відповіді";break;
+ case (yes==3): otvet="3 правильні відповіді";break;
+ case (yes==4): otvet="4 правильних відповідей";break;
+ case (yes==5): otvet="5 правильних відповідей";break;
+ case (yes==6): otvet="6 правильних відповідей";break;
+ case (yes==7): otvet="7 правильних відповідей";break;
+ case (yes==8): otvet="8 правильних відповідей";break;
+ case (yes==9): otvet="9 правильних відповідей";break;
+ case (yes==10): otvet="10 правильних відповідей";break;
+ default: otvet="Щось пішло не так";break;
+ }
+ alert(otvet);
+ }
+</script>
